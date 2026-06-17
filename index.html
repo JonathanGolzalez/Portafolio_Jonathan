@@ -23,6 +23,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
 
+    <link rel="icon" href="images/logo/icon-jonas.png" />
+
     <title>Portafolio - Jonathan</title>
     <!-- CEO -->
     <link rel="stylesheet" href="css/nabvar.css" />
@@ -93,74 +95,76 @@
             ></a>
           </li>
         </ul>
-        <a class="idioma" id="btnIdioma">ES</a>
+        <!-- boton idioma -->
+        <a class="idioma" id="btnIdioma">
+          <span class="estado-indicador"></span>
+          <span class="idioma-text">ES</span>
+        </a>
       </div>
     </nav>
 
     <!-- Hero -->
     <section class="pagina hero active" id="inicio">
-      <div class="hero">
-        <div class="hero-content">
-          <h1>Hola, soy Jonathan</h1>
+      <div class="hero-content">
+        <h1>Hola, soy Jonathan</h1>
+        <p
+          data-es='"Construir el producto adecuado, de la manera correcta."'
+          data-en='"Build the right product, in the right way."'
+        ></p>
+        <br />
+        <p
+          data-es="Desarrollador Backend | Product Owner "
+          data-en="Backend Developer | Product Owner"
+        >
+          Desarrollador Backend | Product Owner
+        </p>
+
+        <section class="contacto-seccion">
           <p
-            data-es='"Construir el producto adecuado, de la manera correcta."'
-            data-en='"Build the right product, in the right way."'
+            class="contacto-texto"
+            data-es="Puedes encontrarme en las siguientes plataformas o escribirme directamente:"
+            data-en="You can find me on the following platforms or write to me directly:"
           ></p>
-          <br />
-          <p
-            data-es="Desarrollador Backend | Product Owner "
-            data-en="Backend Developer | Product Owner"
-          >
-            Desarrollador Backend | Product Owner
-          </p>
 
-          <section class="contacto-seccion">
-            <p
-              class="contacto-texto"
-              data-es="Puedes encontrarme en las siguientes plataformas o escribirme directamente:"
-              data-en="You can find me on the following platforms or write to me directly:"
-            ></p>
+          <div class="contactos-box">
+            <a
+              href="http://github.com/JonathanGolzalez"
+              target="_blank"
+              class="contacto-card github"
+            >
+              <span class="icono">⌘</span>
+              <div>
+                <h3>GitHub</h3>
+                <p data-es="Ver mis proyectos" data-en="See my projects"></p>
+              </div>
+            </a>
 
-            <div class="contactos-box">
-              <a
-                href="http://github.com/JonathanGolzalez"
-                target="_blank"
-                class="contacto-card github"
-              >
-                <span class="icono">⌘</span>
-                <div>
-                  <h3>GitHub</h3>
-                  <p data-es="Ver mis proyectos" data-en="See my projects"></p>
-                </div>
-              </a>
+            <a
+              href="https://www.linkedin.com/in/jonathan-alexander-delgado-gonzález-838911291"
+              target="_blank"
+              class="contacto-card linkedin"
+            >
+              <span class="icono">in</span>
+              <div>
+                <h3>LinkedIn</h3>
+                <p
+                  data-es="Mi perfil profesional"
+                  data-en="My professional profile"
+                >
+                  l
+                </p>
+              </div>
+            </a>
 
-              <a
-                href="https:www.linkedin.com/in/jonathan-alexander-delgado-gonzález-838911291"
-                target="_blank"
-                class="contacto-card linkedin"
-              >
-                <span class="icono">in</span>
-                <div>
-                  <h3>LinkedIn</h3>
-                  <p
-                    data-es="Mi perfil profesional"
-                    data-en="My professional profile"
-                  >
-                    l
-                  </p>
-                </div>
-              </a>
-
-              <a href="mailto:jg783832@gmail.com" class="contacto-card correo">
-                <span class="icono">✉</span>
-                <div>
-                  <h3 data-es="Correo" data-en="Mail">Correo</h3>
-                  <p>jg783832@gmail.com</p>
-                </div>
-              </a>
-            </div>
-          </section>
-        </div>
+            <a href="mailto:jg783832@gmail.com" class="contacto-card correo">
+              <span class="icono">✉</span>
+              <div>
+                <h3 data-es="Correo" data-en="Mail">Correo</h3>
+                <p>jg783832@gmail.com</p>
+              </div>
+            </a>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -169,7 +173,7 @@
       <div class="sobre">
         <div class="secctitulo-acercademi">
           <h2
-            class="titulo-seccion"
+            class="titulo-seccion titulo-sobremi"
             data-es="Acerca de <span>mí</span>"
             data-en="About <span>me</span>"
           >
@@ -192,7 +196,7 @@
         </div>
         <div class="contenedor-sobremi">
           <div class="imagenes-sobremi">
-            <div class="imagen-atras">
+            <div class="imagen-atras marco-po">
               <img src="images/Jonathan.png" alt="Imagen de Jonathan" />
             </div>
 
@@ -300,7 +304,11 @@
 
     <!-- proyectos -->
     <section class="pagina proyectos" id="proyectos">
-      <h2 class="titulo-seccion" data-es="Proyectos" data-en="Projects"></h2>
+      <h2
+        class="titulo-seccion titulo-proyecto"
+        data-es="Proyectos"
+        data-en="Projects"
+      ></h2>
 
       <div class="proyectos-grid">
         <a href="proyectos/veganimo/veganimo.html" class="proyecto-card">
@@ -345,13 +353,497 @@
     </section>
 
     <!-- certificados -->
-    <section class="pagina certificados" id="certificados"></section>
+    <section class="pagina certificados" id="certificados">
+      <h2
+        class="titulo-seccion titulo-certificados"
+        data-es="Certificados"
+        data-en="Certificates"
+      >
+        Certificados
+      </h2>
+
+      <div class="certificados-grid">
+        <!-- Certificado 1 -->
+        <div class="cert-card">
+          <div class="cert-izq">
+            <div class="cert-icon">
+              <!-- Icono diploma -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                />
+              </svg>
+            </div>
+            <span class="cert-fecha">2021</span>
+          </div>
+
+          <div class="cert-body">
+            <h3
+              class="cert-nombre"
+              data-es="Introducción a la programación"
+              data-en="Introduction to programming"
+            ></h3>
+            <p class="cert-emisor">Insaforp</p>
+
+            <img
+              src="certificados/introduccion-progra.jpg"
+              class="img-certificados"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- Certificado 2 -->
+        <div class="cert-card">
+          <div class="cert-izq">
+            <div class="cert-icon">
+              <!-- Icono diploma -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                />
+              </svg>
+            </div>
+            <span class="cert-fecha">2021</span>
+          </div>
+          <div class="cert-body">
+            <h3
+              class="cert-nombre"
+              data-es="Gestión efectiva del tiempo"
+              data-en="Effective time management"
+            ></h3>
+            <p class="cert-emisor">Platzi</p>
+
+            <img
+              src="certificados/gestion-efectiva-tiempo.jpg"
+              class="img-certificados"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- Certificado 3 -->
+        <div class="cert-card">
+          <div class="cert-izq">
+            <div class="cert-icon">
+              <!-- Icono diploma -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                />
+              </svg>
+            </div>
+            <span class="cert-fecha">2021</span>
+          </div>
+          <div class="cert-body">
+            <h3
+              class="cert-nombre"
+              data-es="Para aprender en línea efectivamente"
+              data-en="To learn effectively online"
+            ></h3>
+            <p class="cert-emisor">Platzi</p>
+
+            <img
+              src="certificados/aprender-linea.jpeg"
+              class="img-certificados"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- Certificado 4 -->
+        <div class="cert-card">
+          <div class="cert-izq">
+            <div class="cert-icon">
+              <!-- Icono diploma -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                />
+              </svg>
+            </div>
+            <span class="cert-fecha">2021</span>
+          </div>
+          <div class="cert-body">
+            <h3
+              class="cert-nombre"
+              data-es="Ortografía y redacción"
+              data-en="Spelling and writing"
+            ></h3>
+            <p class="cert-emisor">Insaforp</p>
+
+            <img
+              src="certificados/ortografia-redaccion.jpg"
+              class="img-certificados"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <!-- Certificado 5 -->
+        <div class="cert-card">
+          <div class="cert-izq">
+            <div class="cert-icon">
+              <!-- Icono diploma -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+                />
+              </svg>
+            </div>
+            <span class="cert-fecha">2021</span>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-nombre">English Online</h3>
+            <p class="cert-emisor">Platzi</p>
+
+            <img
+              src="certificados/english-online.jpg"
+              class="img-certificados"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- testimonios -->
-    <section class="pagina testimonios" id="testimonios"></section>
+
+    <section class="pagina testimonios" id="testimonios">
+      <h2
+        class="titulo-seccion titulo-testimonio"
+        data-es="Testimonios"
+        data-en="Testimonials"
+      >
+        Testimonios
+      </h2>
+
+      <div class="testimonios-grid">
+        <!-- Testimonio 1 -->
+        <div class="test-card">
+          <div class="test-estrellas">
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+          </div>
+          <div class="test-comillas">"</div>
+          <p
+            class="test-texto"
+            data-es="Jonathan demostró un gran nivel de organización y liderazgo como Product Owner en nuestro proyecto. Supo priorizar el backlog con criterio técnico y de negocio, manteniendo al equipo siempre enfocado en entregar valor real al cliente."
+            data-en="Jonathan demonstrated a great level of organization and leadership as Product Owner on our project. He knew how to prioritize the backlog with both technical and business criteria, keeping the team always focused on delivering real value to the client."
+          >
+            Jonathan demostró un gran nivel de organización y liderazgo como
+            Product Owner en nuestro proyecto. Supo priorizar el backlog con
+            criterio técnico y de negocio, manteniendo al equipo siempre
+            enfocado en entregar valor real al cliente.
+          </p>
+          <div class="test-divisor"></div>
+          <div class="test-autor">
+            <div class="test-avatar">MR</div>
+            <div class="test-info">
+              <p class="test-nombre">María Rivas</p>
+              <p
+                class="test-rol"
+                data-es="Compañera de proyecto — UGB"
+                data-en="Project teammate — UGB"
+              >
+                Compañera de proyecto — UGB
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 2 -->
+        <div class="test-card">
+          <div class="test-estrellas">
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+          </div>
+          <div class="test-comillas">"</div>
+          <p
+            class="test-texto"
+            data-es="Su capacidad para conectar los requisitos del negocio con el desarrollo técnico fue clave para que Vegánimo avanzara de manera sólida. Es proactivo, claro al comunicar y siempre aporta soluciones antes de señalar problemas."
+            data-en="His ability to connect business requirements with technical development was key to Vegánimo moving forward solidly. He is proactive, clear in communication, and always brings solutions before pointing out problems."
+          >
+            Su capacidad para conectar los requisitos del negocio con el
+            desarrollo técnico fue clave para que Vegánimo avanzara de manera
+            sólida. Es proactivo, claro al comunicar y siempre aporta soluciones
+            antes de señalar problemas.
+          </p>
+          <div class="test-divisor"></div>
+          <div class="test-autor">
+            <div class="test-avatar">CL</div>
+            <div class="test-info">
+              <p class="test-nombre">Carlos López</p>
+              <p
+                class="test-rol"
+                data-es="Líder técnico — Equipo Vegánimo"
+                data-en="Tech lead — Vegánimo team"
+              >
+                Líder técnico — Equipo Vegánimo
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonio 3 -->
+        <div class="test-card">
+          <div class="test-estrellas">
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+            <span class="estrella">★</span>
+          </div>
+          <div class="test-comillas">"</div>
+          <p
+            class="test-texto"
+            data-es="Trabajé con Jonathan en ConsoleXpress y su dominio del backend fue notorio desde el primer sprint. Escribe código limpio, documenta bien y tiene la paciencia para explicar decisiones técnicas al resto del equipo."
+            data-en="I worked with Jonathan on ConsoleXpress and his backend mastery was noticeable from the first sprint. He writes clean code, documents well, and has the patience to explain technical decisions to the rest of the team."
+          >
+            Trabajé con Jonathan en ConsoleXpress y su dominio del backend fue
+            notorio desde el primer sprint. Escribe código limpio, documenta
+            bien y tiene la paciencia para explicar decisiones técnicas al resto
+            del equipo.
+          </p>
+          <div class="test-divisor"></div>
+          <div class="test-autor">
+            <div class="test-avatar">AM</div>
+            <div class="test-info">
+              <p class="test-nombre">Andrea Martínez</p>
+              <p
+                class="test-rol"
+                data-es="Desarrolladora — Equipo ConsoleXpress"
+                data-en="Developer — ConsoleXpress team"
+              >
+                Desarrolladora — Equipo ConsoleXpress
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- contacto -->
-    <section class="pagina contacto" id="contacto"></section>
+
+    <section class="pagina contacto" id="contacto">
+      <h2
+        class="titulo-seccion titulo-contacto"
+        data-es="Contacto"
+        data-en="Contact"
+      >
+        Contacto
+      </h2>
+
+      <div class="contacto-wrapper">
+        <!-- Info lateral izquierda -->
+        <div class="contacto-info">
+          <h3 class="contacto-info-titulo">
+            <span data-es="¿Tienes un proyecto" data-en="Got a project"
+              >¿Tienes un proyecto</span
+            >
+            <br />
+            <span data-es="en mente?" data-en="in mind?">en mente?</span>
+          </h3>
+          <p
+            class="contacto-info-desc"
+            data-es="Estoy disponible para colaboraciones, proyectos freelance o simplemente una conversación técnica. Escríbeme y te respondo en menos de 24 horas."
+            data-en="I'm available for collaborations, freelance projects, or just a technical conversation. Write to me and I'll reply within 24 hours."
+          >
+            Estoy disponible para colaboraciones, proyectos freelance o
+            simplemente una conversación técnica. Escríbeme y te respondo en
+            menos de 24 horas.
+          </p>
+
+          <div class="contacto-canales">
+            <a href="mailto:jg783832@gmail.com" class="canal-item">
+              <div class="canal-icono">✉</div>
+              <div class="canal-texto">
+                <span
+                  class="canal-label"
+                  data-es="Correo electrónico"
+                  data-en="Email"
+                  >Correo electrónico</span
+                >
+                <span class="canal-valor">jg783832@gmail.com</span>
+              </div>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/jonathan-alexander-delgado-gonzález-838911291"
+              target="_blank"
+              class="canal-item"
+            >
+              <div class="canal-icono">in</div>
+              <div class="canal-texto">
+                <span class="canal-label">LinkedIn</span>
+                <span
+                  class="canal-valor"
+                  data-es="Enviar mensaje"
+                  data-en="Send a message"
+                  >Enviar mensaje</span
+                >
+              </div>
+            </a>
+
+            <a
+              href="http://github.com/JonathanGolzalez"
+              target="_blank"
+              class="canal-item"
+            >
+              <div class="canal-icono">⌘</div>
+              <div class="canal-texto">
+                <span class="canal-label">GitHub</span>
+                <span
+                  class="canal-valor"
+                  data-es="Ver mis repositorios"
+                  data-en="Browse my repos"
+                  >Ver mis repositorios</span
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Formulario derecha -->
+        <div class="contacto-form-wrapper">
+          <form
+            class="contacto-form"
+            action="https://formsubmit.co/jg783832@gmail.com"
+            method="POST"
+            id="contactoForm"
+          >
+            <!-- Campos ocultos de FormSubmit -->
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nuevo mensaje desde tu portafolio"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <!-- Redirigir tras envío: cambia la URL por la tuya -->
+            <input
+              type="hidden"
+              name="_next"
+              value="https://tudominio.com/#contacto"
+            />
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre" data-es="Nombre" data-en="Name"
+                  >Nombre</label
+                >
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Jonathan"
+                  required
+                  data-placeholder-es="Jonathan"
+                  data-placeholder-en="Jonathan"
+                />
+              </div>
+              <div class="form-group">
+                <label for="email" data-es="Correo electrónico" data-en="Email"
+                  >Correo electrónico</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="correo@ejemplo.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="asunto" data-es="Asunto" data-en="Subject"
+                >Asunto</label
+              >
+              <select id="asunto" name="asunto" required>
+                <option
+                  value=""
+                  disabled
+                  selected
+                  data-es="Selecciona un tema"
+                  data-en="Select a topic"
+                >
+                  Selecciona un tema
+                </option>
+                <option
+                  value="Proyecto freelance"
+                  data-es="Proyecto freelance"
+                  data-en="Freelance project"
+                >
+                  Proyecto freelance
+                </option>
+                <option
+                  value="Colaboración"
+                  data-es="Colaboración"
+                  data-en="Collaboration"
+                >
+                  Colaboración
+                </option>
+                <option
+                  value="Consulta técnica"
+                  data-es="Consulta técnica"
+                  data-en="Technical inquiry"
+                >
+                  Consulta técnica
+                </option>
+                <option
+                  value="Oportunidad laboral"
+                  data-es="Oportunidad laboral"
+                  data-en="Job opportunity"
+                >
+                  Oportunidad laboral
+                </option>
+                <option value="Otro" data-es="Otro" data-en="Other">
+                  Otro
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje" data-es="Mensaje" data-en="Message"
+                >Mensaje</label
+              >
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="Cuéntame sobre tu proyecto o idea..."
+                required
+                data-placeholder-es="Cuéntame sobre tu proyecto o idea..."
+                data-placeholder-en="Tell me about your project or idea..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-enviar" id="btnEnviar">
+              <span data-es="Enviar mensaje" data-en="Send message"
+                >Enviar mensaje</span
+              >
+              <svg
+                viewBox="0 0 24 24"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+
+            <!-- Mensaje de feedback -->
+            <div class="form-mensaje" id="formMensaje"></div>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer class="main-footer">
@@ -442,5 +934,6 @@
 
     <script src="js/navegacion.js"></script>
     <script src="port-idioma.js"></script>
+    <script src="js/contact-form.js"></script>
   </body>
 </html>

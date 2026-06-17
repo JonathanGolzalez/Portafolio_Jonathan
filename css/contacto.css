@@ -1,0 +1,317 @@
+/* ===== CONTACTO ===== */
+.contacto {
+  padding: 80px 7%;
+  background-color: #1c1c1c;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  position: relative;
+  text-align: center;
+}
+
+.contacto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, #1c1c1c 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.contacto > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Layout del formulario */
+.contacto-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Panel izquierdo: info */
+.contacto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.contacto-info-titulo {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.contacto-info-titulo span {
+  background: linear-gradient(90deg, #3498db, #058450);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.contacto-info-desc {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.97rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Canales de contacto rápido */
+.contacto-canales {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.canal-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  text-decoration: none;
+  transition:
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.canal-item:hover {
+  border-color: rgba(52, 152, 219, 0.35);
+  background: rgba(52, 152, 219, 0.07);
+  transform: translateX(6px);
+}
+
+.canal-icono {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3498db, #058450);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  box-shadow: 0 5px 14px rgba(52, 152, 219, 0.2);
+}
+
+.canal-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.canal-label {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.canal-valor {
+  color: #a0a0a0;
+  font-size: 0.82rem;
+}
+
+/* ===== FORMULARIO ===== */
+.contacto-form-wrapper {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 36px 32px;
+  backdrop-filter: blur(8px);
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 13px 16px;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.93rem;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+  resize: none;
+  -webkit-appearance: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: #3498db;
+  background: rgba(52, 152, 219, 0.07);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.12);
+}
+
+.form-group select option {
+  background: #1c1c1c;
+  color: #ffffff;
+}
+
+.form-group textarea {
+  min-height: 130px;
+}
+
+/* Botón enviar */
+.btn-enviar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 32px;
+  background: linear-gradient(135deg, #3498db, #058450);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    opacity 0.3s ease;
+  box-shadow: 0 10px 25px rgba(52, 152, 219, 0.25);
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.btn-enviar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+}
+
+.btn-enviar:hover::before {
+  left: 130%;
+}
+
+.btn-enviar:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px rgba(52, 152, 219, 0.35);
+}
+
+.btn-enviar:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-enviar svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.btn-enviar:hover svg {
+  transform: translateX(4px);
+}
+
+/* Mensaje de éxito/error */
+.form-mensaje {
+  display: none;
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.form-mensaje.exito {
+  display: block;
+  background: rgba(5, 132, 80, 0.15);
+  border: 1px solid rgba(5, 132, 80, 0.35);
+  color: #12a362;
+}
+
+.form-mensaje.error {
+  display: block;
+  background: rgba(231, 76, 60, 0.12);
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  color: #e74c3c;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .contacto-wrapper {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .contacto-info {
+    order: 2;
+  }
+
+  .contacto-form-wrapper {
+    order: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .contacto {
+    padding: 60px 5%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-form-wrapper {
+    padding: 26px 20px;
+  }
+}

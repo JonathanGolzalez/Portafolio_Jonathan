@@ -24,6 +24,10 @@
   z-index: 1;
 }
 
+.sobre-mi {
+  padding: 10px 40px;
+}
+
 .sobre-mi .secctitulo-acercademi h2 {
   font-size: 3rem;
   margin-bottom: 10px;
@@ -34,21 +38,21 @@
 }
 
 .sobre-mi .descripcion {
-  font-size: 1.4rem;
-  color: #b0b0b0;
-  max-width: 700px;
-  margin: 0 auto;
-  margin-top: 20px;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  line-height: 1.8;
+  text-align: center;
 }
 
 .sobre {
-  position: relative;
   display: flex;
   justify-content: center;
-  height: 100vh;
-  gap: 20px;
+  align-items: center;
+  gap: 50px;
 
-  top: 120px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 120px 20px 80px;
 }
 
 .titulo-seccion {
@@ -71,18 +75,118 @@
 }
 
 /* Contenedor de la imagen y el texto */
-
-.sobre-mi .imagenes-sobremi {
-  margin-right: 30px; /* Espacio entre la imagen y el texto */
+/* Marco Product Owner */
+.imagen-atras {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 18px;
+  border-radius: 28px;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.25),
+    rgba(5, 132, 80, 0.25)
+  );
+  overflow: hidden;
 }
 
-.sobre-mi .imagenes-sobremi .imagen-atras img {
-  width: 350px; /* Limitar el tamaño de la imagen */
-  height: auto; /* Mantener la relación de aspecto */
-  max-width: 100%; /* Asegura que no se desborde */
-  border-radius: 10px; /* Bordes redondeados (opcional) */
-  display: block; /* Elimina el espacio en blanco debajo de la imagen */
-  margin: 0 auto; /* Centra la imagen */
+.imagen-atras::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(135deg, #3498db, #058450, #3498db);
+
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  animation: bordePO 6s linear infinite;
+}
+
+.imagen-atras::after {
+  content: "ROADMAP • KPI • BACKLOG • SPRINT";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+
+  padding: 8px 12px;
+  border-radius: 50px;
+  z-index: 30;
+}
+
+.imagen-atras img {
+  width: 100%;
+  max-width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+/* KPI superior */
+
+.imagen-atras {
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.35),
+    0 0 30px rgba(52, 152, 219, 0.15);
+}
+
+/* Elementos decorativos Product Owner */
+
+.marco-po::before {
+  box-shadow:
+    0 0 30px rgba(52, 152, 219, 0.4),
+    0 0 60px rgba(5, 132, 80, 0.2);
+}
+
+.marco-po .po-card {
+  display: none;
+}
+
+.imagen-atras .indicador-1,
+.imagen-atras .indicador-2,
+.imagen-atras .indicador-3 {
+  position: absolute;
+  z-index: 3;
+}
+
+.imagen-atras::selection {
+  background: transparent;
+}
+
+/* Mini dashboard */
+
+.imagen-atras span {
+  display: none;
+}
+
+.imagen-atras::marker {
+  display: none;
+}
+
+@keyframes bordePO {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
 }
 
 .cv-seccion {
@@ -97,7 +201,7 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  margin-top: -30px;
+  margin-top: -80px;
   gap: 12px;
   padding: 16px 30px;
   background: linear-gradient(135deg, #3498db, #058450);
@@ -112,6 +216,7 @@
     box-shadow 0.35s ease;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   animation: flotar 2.5s ease-in-out infinite;
+  z-index: 90;
 }
 
 .btn-cv:hover {
@@ -160,10 +265,10 @@
   }
 }
 
+/* ---------------------------------------------------------*/
+/*habilidades*/
 .habilidades-contenedor {
-  position: relative;
-  height: 100vh;
-  gap: 20px;
+  padding: 60px 20px 100px;
 }
 
 .habilidades .titulo-seccion {
@@ -315,8 +420,96 @@
   }
 }
 
+/* Aplicaciones (Pills) */
+.aplicaciones-grid {
+  margin-top: 40px;
+  justify-content: center;
+  position: relative;
+  display: grid;
+}
+
+.pills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.pill {
+  background: #058450;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
 /* Responsive */
+@media (max-width: 992px) {
+  .sobre {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 140px;
+  }
+
+  .imagenes-sobremi {
+    order: 1;
+    margin-top: 100px;
+  }
+
+  .secctitulo-acercademi {
+    order: 2;
+    margin-top: -100px;
+  }
+
+  .sobre-mi .descripcion {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
+  .sobre-mi {
+    padding: 0 15px;
+  }
+
+  .sobre {
+    gap: 30px;
+    padding-top: 120px;
+    padding-bottom: 60px;
+  }
+
+  .titulo-seccion {
+    font-size: 1.8rem;
+  }
+
+  .sobre-mi .secctitulo-acercademi h2 {
+    font-size: 2rem;
+  }
+
+  .imagen-atras {
+    padding: 12px;
+  }
+
+  .imagen-atras::after {
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+    padding: 6px 10px;
+  }
+
+  .btn-cv {
+    padding: 14px 22px;
+    font-size: 0.9rem;
+    margin-top: -50px;
+  }
+
+  .habilidades-container {
+    grid-template-columns: 1fr;
+  }
+
+  .pills-container {
+    justify-content: center;
+  }
+
   .habilidades {
     padding: 80px 15px;
   }
@@ -344,26 +537,27 @@
   }
 }
 
-/* Aplicaciones (Pills) */
-.aplicaciones-grid {
-  margin-top: 40px;
-  justify-content: center;
-  position: relative;
-  display: grid;
-}
+@media (max-width: 480px) {
+  .imagen-atras img {
+    max-width: 260px;
+  }
 
-.pills-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 15px;
-}
+  .sobre-mi .secctitulo-acercademi h2 {
+    font-size: 1.7rem;
+  }
 
-.pill {
-  background: #058450;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  .sobre-mi .descripcion {
+    font-size: 0.95rem;
+  }
+
+  .btn-cv {
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
+  }
+
+  .pill {
+    width: 100%;
+    text-align: center;
+  }
 }

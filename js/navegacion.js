@@ -7,27 +7,34 @@ document.addEventListener("DOMContentLoaded", () => {
       pagina.classList.remove("active");
     });
 
+    links.forEach((link) => {
+      link.classList.remove("active");
+    });
+
     const pagina = document.getElementById(id);
 
     if (pagina) {
       pagina.classList.add("active");
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
     }
+
+    const linkActivo = document.querySelector(`[data-section="${id}"]`);
+
+    if (linkActivo) {
+      linkActivo.classList.add("active");
+    }
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }
 
-  // Mostrar Inicio al cargar
   mostrarPagina("inicio");
 
   links.forEach((link) => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-
-      const destino = link.dataset.section;
-
-      mostrarPagina(destino);
+      mostrarPagina(link.dataset.section);
     });
   });
 });

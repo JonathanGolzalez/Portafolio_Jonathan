@@ -1,6 +1,9 @@
 /* Hero Section */
+
 .hero-content {
-  height: 110vh;
+  min-height: calc(100vh + 90px); /* resta aprox navbar */
+  width: 100%;
+
   background-image:
     linear-gradient(
       to bottom,
@@ -8,28 +11,27 @@
       rgba(18, 18, 18, 0.671) 100%
     ),
     url("/images/bg-bakend.jpg");
+
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
+
   display: block;
   justify-content: center;
   align-items: center;
+
+  padding: 120px 20px 60px;
   text-align: center;
 }
 
-.hero-content {
-  color: #fff;
-}
-
 .hero h1 {
-  font-size: 4rem;
+  font-size: clamp(3rem, 7vw, 5rem);
   margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
 }
-
 .contacto-seccion {
   width: 100%;
   max-width: 900px;

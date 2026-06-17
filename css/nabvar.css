@@ -53,12 +53,82 @@ body {
   font-size: 1rem;
 }
 
+.nav-links a.active {
+  color: #058450;
+  font-weight: 600;
+}
+
+.nav-links a {
+  transition: 0.3s;
+}
+
 /*boton ingles/español*/
 .idioma {
-  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 18px;
+
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(5, 132, 80, 0.4);
+
+  border-radius: 14px;
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+
   cursor: pointer;
-  padding: 6px;
-  background: #058450;
+
+  backdrop-filter: blur(10px);
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow */
+.idioma::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    90deg,
+    rgba(52, 152, 219, 0.15),
+    rgba(5, 132, 80, 0.15)
+  );
+
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.estado-indicador {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #05c46b;
+  box-shadow: 0 0 10px #05c46b;
+}
+/* Español */
+.estado-indicador.es {
+  background: #05c46b;
+  box-shadow: 0 0 10px #05c46b;
+}
+
+/* Inglés */
+.estado-indicador.en {
+  background: #3498db;
+  box-shadow: 0 0 10px #3498db;
 }
 
 .idioma:active {
@@ -68,12 +138,14 @@ body {
 /* Sistema de páginas */
 .pagina {
   display: none;
-  min-height: calc(100vh - 180px);
 }
 
 .pagina.active {
   display: block;
-  animation: fadeIn 0.4s ease;
+}
+
+.hero.active {
+  display: flex !important;
 }
 
 /* Las secciones que no usan flex */
@@ -108,5 +180,127 @@ body {
 
   .navbar .nav-links li a {
     font-size: 0.9rem;
+  }
+}
+
+.titulo-certificados,
+.titulo-contacto,
+.titulo-testimonio,
+.titulo-proyecto,
+.titulo-sobremi {
+  margin-top: 20px;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 992px) {
+  .titulo-certificados,
+  .titulo-contacto,
+  .titulo-testimonio,
+  .titulo-proyecto,
+  .titulo-sobremi {
+    margin-top: 100px;
+  }
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar .container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .logo {
+    width: 170px;
+    margin-left: 0;
+  }
+
+  .navbar .nav-links {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .navbar .nav-links li {
+    margin-left: 0;
+  }
+
+  .navbar .nav-links li a {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   MOVIL
+========================= */
+@media (max-width: 768px) {
+  .titulo-certificados,
+  .titulo-contacto,
+  .titulo-testimonio,
+  .titulo-proyecto,
+  .titulo-sobremi {
+    margin-top: 120px;
+  }
+
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .navbar .container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .navbar .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .navbar .nav-links li {
+    margin: 0;
+  }
+
+  .navbar .nav-links li a {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+
+  .idioma {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+}
+
+/* =========================
+   MOVIL PEQUEÑO
+========================= */
+@media (max-width: 480px) {
+  .logo {
+    width: 130px;
+  }
+
+  .navbar .nav-links {
+    gap: 6px;
+  }
+
+  .navbar .nav-links li a {
+    font-size: 0.78rem;
+    padding: 5px 6px;
+  }
+
+  .idioma {
+    width: auto;
+    min-width: 85px;
+    justify-content: center;
   }
 }

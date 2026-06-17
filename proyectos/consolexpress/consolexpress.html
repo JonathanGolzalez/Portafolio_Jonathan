@@ -1,79 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title data-es="ConsoleXpress" data-en="ConsoleXpress">ConsoleXpress</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="/proyectos/estilo-proy.css">
-</head>
-<body class="dark-theme">
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/proyectos/estilo-proy.css" />
+  </head>
+  <body class="dark-theme">
     <header class="navegacion-proyecto">
-        <div class="nav-container">
-            <a href="../../index.html" class="btn-regresar" title="Volver al portafolio">
-                <i class="fas fa-arrow-left"></i>
-            </a>
-            <div class="logo"><img src="images/logo/logo-verde.svg" alt=""></div>
-            <a class="idioma-pill" id="btnIdioma">ES</a>
-        </div>
+      <div class="nav-container">
+        <a
+          href="../../index.html"
+          class="btn-regresar"
+          title="Volver al portafolio"
+        >
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <div class="logo"><img src="images/logo/logo-verde.svg" alt="" /></div>
+        <!-- boton idioma -->
+        <a class="idioma-pill" id="btnIdioma">
+          <span class="estado-indicador"></span>
+          <span class="idioma-text">ES</span>
+        </a>
+      </div>
     </header>
 
     <main class="contenedor-proyecto">
-        <header class="proyecto-header">
-            <div class="titulo-grupo">
-                <h1 class="proyecto-titulo" data-es="ConsoleXpress" data-en="ConsoleXpress">ConsoleXpress</h1>
-                <div class="linea-decorativa"></div>
-            </div>
-            <span class="proyecto-rol" data-es="Desarrollador Backend" data-en="Backend Developer">Backend Developer</span>
-        </header>
-
-        <section class="banner-principal">
-            <img src="/proyectos/consolexpress/img-portcons.png" alt="Banner Vegánimo" class="img-fluida">
-        </section>
-
-        <div class="grid-info">
-            <section class="info-seccion">
-                <h3 class="subtitulo-proyecto" data-es="Tecnologías" data-en="Technologies">
-                    <i class="fas fa-code"></i> Technologies
-                </h3>
-                <div class="tags-contenedor">
-                    <span class="tag">HTML5</span>
-                    <span class="tag">CSS</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">Django</span>
-                    <span class="tag">JavaScript</span>
-                </div>
-            </section>
-
-            <section class="info-seccion">
-                <h3 class="subtitulo-proyecto" data-es="Competencias" data-en="Skills">
-                    <i class="fas fa-check-circle"></i> Skills
-                </h3>
-                <div class="tags-contenedor">
-                    <span class="tag-alt" data-es="Desarrollo de backend para la compra de consolas" data-en="Backend development for console purchasing">Backend development for console purchasing</span>
-                    <span class="tag-alt" data-es="Lógica de gestión de productos (consolas)" data-en="Product management logic (consoles)">Product management logic (consoles)</span>
-                    <span class="tag-alt" data-es="Procesamiento de pedidos" data-en="Order processing">Order processing</span>
-                    <span class="tag-alt" data-es="Validación de datos en el sistema de compra" data-en="Data validation in the purchasing system">Data validation in the purchasing system</span>
-                    <span class="tag-alt" data-es="Integración del flujo de compra" data-en="Purchase flow integration">Purchase flow integration</span>
-                </div>
-            </section>
+      <header class="proyecto-header">
+        <div class="titulo-grupo">
+          <h1
+            class="proyecto-titulo"
+            data-es="ConsoleXpress"
+            data-en="ConsoleXpress"
+          >
+            ConsoleXpress
+          </h1>
+          <div class="linea-decorativa"></div>
         </div>
+        <span
+          class="proyecto-rol"
+          data-es="Desarrollador Backend"
+          data-en="Backend Developer"
+          >Backend Developer</span
+        >
+      </header>
 
-        <section class="galeria-pruebas">
-            <div class="foto-marco"><img src="/proyectos/consolexpress/img-portcons.png" class="img-galeria"></div>
-            <div class="foto-marco"><img src="/proyectos/consolexpress/img-pprincipal.png" class="img-galeria"></div>
-            <div class="foto-marco"><img src="/proyectos/consolexpress/img-compra.png" class="img-galeria"></div>
-            <div class="foto-marco"><img src="/proyectos/consolexpress/img-chatbot.png" class="img-galeria"></div>
+      <section class="banner-principal">
+        <img
+          src="/proyectos/consolexpress/img-portcons.png"
+          alt="Banner Vegánimo"
+          class="img-fluida"
+        />
+      </section>
+
+      <div class="grid-info">
+        <section class="info-seccion">
+          <h3
+            class="subtitulo-proyecto"
+            data-es="Tecnologías"
+            data-en="Technologies"
+          >
+            <i class="fas fa-code"></i> Technologies
+          </h3>
+          <div class="tags-contenedor">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">JavaScript</span>
+          </div>
         </section>
 
-        <footer class="proyecto-footer">
-            <a href="https://github.com/RachellRG29/PrograIII_2024_Semi/tree/ConsoleXpress_Tienda" target="_blank" class="btn-github-premium" data-es="Ver Código en GitHub" data-en="View Code on GitHub">
-                <i class="fab fa-github"></i> View Code on GitHub
-            </a>
-        </footer>
+        <section class="info-seccion">
+          <h3
+            class="subtitulo-proyecto"
+            data-es="Competencias"
+            data-en="Skills"
+          >
+            <i class="fas fa-check-circle"></i> Skills
+          </h3>
+          <div class="tags-contenedor">
+            <span
+              class="tag-alt"
+              data-es="Desarrollo de backend para la compra de consolas"
+              data-en="Backend development for console purchasing"
+              >Backend development for console purchasing</span
+            >
+            <span
+              class="tag-alt"
+              data-es="Lógica de gestión de productos (consolas)"
+              data-en="Product management logic (consoles)"
+              >Product management logic (consoles)</span
+            >
+            <span
+              class="tag-alt"
+              data-es="Procesamiento de pedidos"
+              data-en="Order processing"
+              >Order processing</span
+            >
+            <span
+              class="tag-alt"
+              data-es="Validación de datos en el sistema de compra"
+              data-en="Data validation in the purchasing system"
+              >Data validation in the purchasing system</span
+            >
+            <span
+              class="tag-alt"
+              data-es="Integración del flujo de compra"
+              data-en="Purchase flow integration"
+              >Purchase flow integration</span
+            >
+          </div>
+        </section>
+      </div>
+
+      <section class="galeria-pruebas">
+        <div class="foto-marco">
+          <img
+            src="/proyectos/consolexpress/img-portcons.png"
+            class="img-galeria"
+          />
+        </div>
+        <div class="foto-marco">
+          <img
+            src="/proyectos/consolexpress/img-pprincipal.png"
+            class="img-galeria"
+          />
+        </div>
+        <div class="foto-marco">
+          <img
+            src="/proyectos/consolexpress/img-compra.png"
+            class="img-galeria"
+          />
+        </div>
+        <div class="foto-marco">
+          <img
+            src="/proyectos/consolexpress/img-chatbot.png"
+            class="img-galeria"
+          />
+        </div>
+      </section>
+
+      <footer class="proyecto-footer">
+        <a
+          href="https://github.com/RachellRG29/PrograIII_2024_Semi/tree/ConsoleXpress_Tienda"
+          target="_blank"
+          class="btn-github-premium"
+          data-es="Ver Código en GitHub"
+          data-en="View Code on GitHub"
+        >
+          <i class="fab fa-github"></i> View Code on GitHub
+        </a>
+      </footer>
     </main>
 
     <script src="../../port-idioma.js"></script>
-</body>
+  </body>
 </html>
