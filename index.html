@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio profesional de Jonathan, desarrollador y diseñador UI/UX">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>Portafolio - Jonathan</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/sobremi.css">
+    <link rel="stylesheet" href="css/proyectos.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo"><img src="images/logo/logo-blanco.svg" alt=""></a>
+            <ul class="nav-links">
+                <li><a href="#sobre-mi" data-es="Sobre mí" data-en="About me"></a></li>
+                <li><a href="#habilidades" data-es="Habilidades" data-en="Skills"></a></li>
+                <li><a href="#proyectos" data-es="Proyectos" data-en="Projects"></a></li>
+                <!--<li><a href="#contacto">Contacto</a></li>-->
+            </ul>
+                <a class="idioma" id="btnIdioma">ES</a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hola, soy Jonathan</h1>
+            <p data-es='"Construir el producto adecuado, de la manera correcta."' data-en='"Build the right product, in the right way."'></p>
+            <br>
+            <p data-es="Desarrollador Backend | Product Owner " data-en="Backend Developer | Product Owner">Desarrollador Backend | Product Owner </p>
+
+            <section class="contacto-seccion">
+                <p class="contacto-texto" data-es="Puedes encontrarme en las siguientes plataformas o escribirme directamente:" data-en="You can find me on the following platforms or write to me directly:">
+                    
+                </p>
+
+                <div class="contactos-box">
+                    <a href="http://github.com/JonathanGolzalez" target="_blank" class="contacto-card github">
+                        <span class="icono">⌘</span>
+                        <div>
+                            <h3>GitHub</h3>
+                            <p data-es="Ver mis proyectos" data-en="See my projects"></p>
+                        </div>
+                    </a>
+
+                    <a href="https:www.linkedin.com/in/jonathan-alexander-delgado-gonzález-838911291" target="_blank" class="contacto-card linkedin">
+                        <span class="icono">in</span>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p data-es="Mi perfil profesional" data-en="My professional profile">l</p>
+                        </div>
+                    </a>
+
+                    <a href="mailto:jg783832@gmail.com" class="contacto-card correo">
+                        <span class="icono">✉</span>
+                        <div>
+                            <h3 data-es="Correo" data-en="Mail">Correo</h3>
+                            <p>jg783832@gmail.com</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section class="sobre-mi" id="sobre-mi">
+        <div class="secctitulo-acercademi">
+            <h2 class="titulo-seccion" data-es='Acerca de <span>mí</span>' data-en='About <span>me</span>'>Acerca de <span>mí</span></h2>
+            <p class="descripcion" 
+            data-es="Soy estudiante de Ingeniería en Sistemas y Redes Informáticas en la Universidad Gerardo Barrios (UGB), actualmente en el 8º ciclo.
+                Me enfoco en el desarrollo Backend y la gestión de proyectos, con interés en el rol de Product Owner. 
+                Tengo habilidades analíticas, trabajo bien en equipo y me adapto rápidamente a nuevas tecnologías. 
+                Me considero proactivo, con capacidad de trabajar bajo presión y un buen orador, siempre dispuesto a aprender más y aportar al éxito del equipo." 
+            
+            data-en="I am a Systems and Networks Engineering student at Gerardo Barrios University (UGB), currently in my eighth semester.
+
+            I focus on backend development and project management, with an interest in the Product Owner role.
+
+            I have strong analytical skills, work well in a team, and adapt quickly to new technologies.
+
+            I consider myself proactive, capable of working under pressure, and a good communicator, always eager to learn more and contribute to the team's success.">
+                
+            </p>
+        </div>
+        <div class="contenedor-sobremi">
+            <div class="imagenes-sobremi">
+                <div class="imagen-atras">
+                    <img src="images/Jonathan.png" alt="Imagen de Jonathan">
+                </div>
+
+                <section class="cv-seccion">
+                    <a href="cv/Jonathan-Backend-PO.pdf" download class="btn-cv">
+                        <span class="btn-cv-texto" data-es="Descargar CV" data-en="Download CV">Descargar CV</span>
+                        <span class="btn-cv-icono">
+                            <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 14V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 3V17M12 17L7 11.5555M12 17L17 11.5556" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+                </section>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section class="habilidades" id="habilidades">
+        <h2 class="titulo-seccion" data-es="Habilidades" data-en="Skills">Habilidades</h2>
+
+        <div class="habilidades-container">
+            <div class="habilidad-card">
+                <div class="habilidad-top">
+                    <h3 data-es="Desarrollo Backend" data-en="Backend Development">Desarrollo Backend</h3>
+                    <span>50%</span>
+                </div>
+
+                <p class="habilidad-texto" 
+                
+                data-es="Construcción de lógica, bases de datos y estructura funcional para aplicaciones web."
+                
+                data-en="Building logic, databases, and functional structure for web applications." >
+                    
+                </p>
+
+                <div class="progress-bar">
+                    <div class="progress backend"></div>
+                </div>
+            </div>
+
+            <div class="habilidad-card">
+                <div class="habilidad-top">
+                    <h3 data-es="Gestión de Proyectos" data-en="Gestión de Proyectos"></h3>
+                    <span>60%</span>
+                </div>
+
+                <p class="habilidad-texto" data-es="Organización de tareas, planificación y seguimiento de procesos de desarrollo." data-en="Task organization, planning and monitoring of development processes.">
+                    
+                </p>
+
+                <div class="progress-bar">
+                    <div class="progress gestion"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="aplicaciones-grid">
+            <h2 class="titulo-seccion" data-es="Aplicaciones utilizadas" data-en="Applications used"></h2>
+            <div class="pills-container">
+                <span class="pill"  data-es="Visual Studio Code" data-en="Visual Studio Code"></span>
+                <span class="pill">Azure DevOps</span>
+                <span class="pill">Cisco Packet Tracer</span>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PROYECTOS -->
+    <section class="proyectos" id="proyectos">
+        <h2 class="titulo-seccion" data-es="Proyectos" data-en="Projects"></h2>
+
+        <div class="proyectos-grid">
+            <a href="proyectos/veganimo/veganimo.html" class="proyecto-card">
+                <img src="proyectos/veganimo/img-veg-port.png" class="imagen-placeholder" alt="">
+                <div class="proyecto-info">
+                    <h3>Vegánimo</h3>
+                    <p>Product Owner</p>
+                </div>
+            </a>
+
+            <a href="proyectos/consolexpress/consolexpress.html" class="proyecto-card">
+                <img src="proyectos/consolexpress/img-portcons.png" class="imagen-placeholder" alt="">
+                <div class="proyecto-info">
+                    <h3>ConsoleXpress</h3>
+                    <p data-es="Desarrollador Backend" data-en="Backend Developer"></p>
+                </div>
+            </a>
+
+            <a href="proyectos/sivar-tours/sivar-tours.html" class="proyecto-card">
+                <img src="proyectos/sivar-tours/img-sivar.jpg" class="imagen-placeholder" alt="">
+                <div class="proyecto-info">
+                    <h3>Sivar Tours</h3>
+                    <p data-es="Desarrollador Backend" data-en="Backend Developer"></p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-top">
+                <img src="images/logo/logo-blanco.svg" class="footer-logo" alt="">
+                
+                <div class="social-links">
+                    <a href="http://github.com/JonathanGolzalez" target="_blank" class="social-icon github-footer" title="GitHub">
+                        <svg width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#fff" fill-rule="evenodd" clip-rule="evenodd" d="M7.976 0A7.977 7.977 0 000 7.976c0 3.522 2.3 6.507 5.431 7.584.392.049.538-.196.538-.392v-1.37c-2.201.49-2.69-1.076-2.69-1.076-.343-.93-.881-1.175-.881-1.175-.734-.489.048-.489.048-.489.783.049 1.224.832 1.224.832.734 1.223 1.859.88 2.3.685.048-.538.293-.88.489-1.076-1.762-.196-3.621-.881-3.621-3.964 0-.88.293-1.566.832-2.153-.05-.147-.343-.978.098-2.055 0 0 .685-.196 2.201.832.636-.196 1.322-.245 2.007-.245s1.37.098 2.006.245c1.517-1.027 2.202-.832 2.202-.832.44 1.077.146 1.908.097 2.104a3.16 3.16 0 01.832 2.153c0 3.083-1.86 3.719-3.62 3.915.293.244.538.733.538 1.467v2.202c0 .196.146.44.538.392A7.984 7.984 0 0016 7.976C15.951 3.572 12.38 0 7.976 0z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jonathan-gonzalez-838911291" target="_blank" class="social-icon linkedin-footer" title="LinkedIn">
+                        <svg fill="#fff" width="30px" height="30px" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M212,28H44A16.01817,16.01817,0,0,0,28,44V212a16.01833,16.01833,0,0,0,16,16H212a16.01833,16.01833,0,0,0,16-16V44A16.01817,16.01817,0,0,0,212,28ZM96,176.001a8,8,0,1,1-16,0v-64a8,8,0,0,1,16,0ZM88,92a12,12,0,1,1,12-12A12,12,0,0,1,88,92Zm96,84.001a8,8,0,1,1-16,0v-36a20,20,0,0,0-40,0v36a8,8,0,1,1-16,0v-64a7.99729,7.99729,0,0,1,15.79492-1.77857A35.98125,35.98125,0,0,1,184,140.001Z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:jg783832@gmail.com" class="social-icon email-footer" title="Email">
+                        <svg fill="#fff" width="30px" height="30px" viewBox="0 0 36 36" version="1.1"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <title>email-solid</title>
+                            <path class="clr-i-solid clr-i-solid-path-1" d="M32.33,6a2,2,0,0,0-.41,0h-28a2,2,0,0,0-.53.08L17.84,20.47Z"></path><path class="clr-i-solid clr-i-solid-path-2" d="M33.81,7.39,19.25,21.89a2,2,0,0,1-2.82,0L2,7.5a2,2,0,0,0-.07.5V28a2,2,0,0,0,2,2h28a2,2,0,0,0,2-2V8A2,2,0,0,0,33.81,7.39ZM5.3,28H3.91V26.57l7.27-7.21,1.41,1.41Zm26.61,0H30.51l-7.29-7.23,1.41-1.41,7.27,7.21Z"></path>
+                            <rect x="0" y="0" width="36" height="36" fill-opacity="0"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            
+            <hr class="footer-line">
+            
+            <div class="footer-bottom">
+                <p data-es="&copy; 2026. Todos los derechos reservados." data-en="© 2026. All rights reserved."></p>
+            </div>
+        </div>
+    </footer>
+
+      <!-- Contacto -->
+    <!--<section class="contacto" id="contacto">
+        <h2 class="titulo-seccion">Contacto</h2>
+        <p>¿Te gustaría trabajar conmigo? Contáctame a través de:</p>
+        <a href="mailto:Jg783832@gmail.com" class="btn">Enviar correo</a>
+         <a href="https://www.linkedin.com/in/jonathan-gonzalez-838911291" target="_blank" class="btn">Mi LinkedIn</a>
+    </section>-->
+
+    <script src="script.js"></script>
+    <script src="port-idioma.js"></script>
+</body>
+</html>
