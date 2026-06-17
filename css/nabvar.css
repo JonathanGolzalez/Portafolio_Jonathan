@@ -1,0 +1,112 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  padding: 20px 0;
+  backdrop-filter: blur(20px);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  margin-left: 20px;
+  width: 210px;
+  height: auto;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 30px;
+}
+
+.navbar .nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/*boton ingles/español*/
+.idioma {
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px;
+  background: #058450;
+}
+
+.idioma:active {
+  background-color: #05a261;
+}
+
+/* Sistema de páginas */
+.pagina {
+  display: none;
+  min-height: calc(100vh - 180px);
+}
+
+.pagina.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Las secciones que no usan flex */
+.habilidades.active,
+.proyectos.active,
+.certificados.active,
+.testimonios.active,
+.contacto.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Navbar --- */
+@media (max-width: 900px) {
+  .navbar .nav-links {
+    gap: 0;
+  }
+
+  .navbar .nav-links li {
+    margin-left: 16px;
+  }
+
+  .navbar .nav-links li a {
+    font-size: 0.9rem;
+  }
+}

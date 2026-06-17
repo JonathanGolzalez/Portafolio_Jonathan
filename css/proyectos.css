@@ -1,87 +1,102 @@
 /* Contenedor principal de la sección */
 .proyectos {
-    padding: 80px 7%;
-    /*background: linear-gradient(180deg, #121212 0%, #0f1720 100%);*/
-    text-align: center;
+  padding: 80px 7%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  text-align: center;
+}
+
+.proyectos::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, #1c1c1c 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .titulo-seccion {
-    text-align: center;
-    font-size: 2.3rem;
-    color: #ffffff;
-    margin-bottom: 50px;
-    position: relative;
-    letter-spacing: 1px;
+  text-align: center;
+  font-size: 2.3rem;
+  color: #ffffff;
+  margin-bottom: 50px;
+  position: relative;
+  letter-spacing: 1px;
 }
 
 .titulo-seccion::after {
-    content: "";
-    display: block;
-    width: 90px;
-    height: 4px;
-    margin: 14px auto 0;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #3498DB, #058450);
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin: 14px auto 0;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #3498db, #058450);
 }
 
 /* Grid para alinear las tarjetas */
 .proyectos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Estilo de la Tarjeta */
 .proyecto-card {
-    background-color: #1a1f26; /* Gris muy oscuro como el de la imagen */
-    border-radius: 20px;
-    padding: 20px;
-    text-decoration: none; /* Quita el subrayado del enlace */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: block;
-    text-align: left;
+  background-color: #1a1f26; /* Gris muy oscuro como el de la imagen */
+  border-radius: 20px;
+  padding: 20px;
+  text-decoration: none; /* Quita el subrayado del enlace */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: block;
+  text-align: left;
 }
 
 .proyecto-card:hover {
-    transform: translateY(-8px);
-    border-color: rgba(52, 152, 219, 0.35);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  transform: translateY(-8px);
+  border-color: rgba(52, 152, 219, 0.35);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
 .proyecto-card::before {
-    content: "";
+  content: "";
 
-    inset: 0;
-    background: linear-gradient(135deg, rgba(52, 152, 219, 0.10), rgba(5, 132, 80, 0.08));
-    opacity: 0;
-    transition: opacity 0.35s ease;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.1),
+    rgba(5, 132, 80, 0.08)
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
 }
-
-
 
 /* El recuadro blanco de la imagen */
 .imagen-placeholder {
-    width: 100%;
-    height: 420px;
-    object-fit: cover;
-    display: block;
-    aspect-ratio: 1 / 1; /* Lo hace cuadrado */
-    border-radius: 15px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 1 / 1; /* Lo hace cuadrado */
+  border-radius: 15px;
+  margin-bottom: 20px;
 }
-
 
 /* Textos dentro de la tarjeta */
 .proyecto-info h3 {
-    color: #ffffff;
-    font-size: 1.4rem;
-    margin-bottom: 5px;
-    font-weight: 700;
+  color: #ffffff;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+  font-weight: 700;
 }
 
 .proyecto-info p {
-    color: #a0a0a0; /* Color gris claro para el rol */
-    font-size: 1rem;
+  color: #a0a0a0; /* Color gris claro para el rol */
+  font-size: 1rem;
 }
