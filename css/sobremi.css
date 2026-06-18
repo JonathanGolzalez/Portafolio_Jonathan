@@ -78,7 +78,7 @@
 /* Marco Product Owner */
 .imagen-atras {
   position: relative;
-  width: fit-content;
+  width: 340px;
   margin: 0 auto;
   padding: 18px;
   border-radius: 28px;
@@ -131,7 +131,7 @@
 .imagen-atras img {
   width: 100%;
   max-width: 100%;
-  max-width: 350px;
+  max-width: 450px;
   height: auto;
   display: block;
   border-radius: 18px;
@@ -539,7 +539,7 @@
 
 @media (max-width: 480px) {
   .imagen-atras img {
-    max-width: 260px;
+    max-width: 360px;
   }
 
   .sobre-mi .secctitulo-acercademi h2 {
