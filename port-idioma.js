@@ -6,30 +6,29 @@ const indicador = btn.querySelector(".estado-indicador");
 let idioma = localStorage.getItem("idioma") || "es";
 
 function aplicarIdioma() {
-  // Cambiar idioma del documento
+  // Idioma del documento
   document.documentElement.lang = idioma;
 
-  // Cambiar texto del botón
+  // Texto botón idioma
   textoIdioma.textContent = idioma.toUpperCase();
 
-  // Cambiar color del indicador
+  // Indicador
   indicador.classList.remove("es", "en");
   indicador.classList.add(idioma);
 
-  // Traducir elementos
+  // Traducciones
   document.querySelectorAll("[data-es]").forEach((el) => {
     el.innerHTML = el.getAttribute(`data-${idioma}`);
   });
-}
 
-  // CV
+  // CV según idioma
   if (btnCV) {
     btnCV.href =
       idioma === "es"
-        ? "curriculum-vitae/Cindy_Ramirez_UXUI_FrontEnd_2026-ES.pdf" /*cv español */
-        : "curriculum-vitae/Cindy_Ramirez_UXUI_FrontEnd_2026-EN.pdf"; /*cv ingles */
+        ? "curriculum-vitae/Jonathan-Backend-PO-ES.pdf"
+        : "curriculum-vitae/Jonathan-Backend-PO-EN.pdf";
   }
-
+}
 // Aplicar idioma al cargar
 aplicarIdioma();
 
