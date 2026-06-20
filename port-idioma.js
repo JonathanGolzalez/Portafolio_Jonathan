@@ -1,4 +1,5 @@
 const btn = document.getElementById("btnIdioma");
+const btnCV = document.getElementById("btnCV");
 const textoIdioma = btn.querySelector(".idioma-text");
 const indicador = btn.querySelector(".estado-indicador");
 
@@ -20,6 +21,14 @@ function aplicarIdioma() {
     el.innerHTML = el.getAttribute(`data-${idioma}`);
   });
 }
+
+  // CV
+  if (btnCV) {
+    btnCV.href =
+      idioma === "es"
+        ? "curriculum-vitae/Cindy_Ramirez_UXUI_FrontEnd_2026-ES.pdf" /*cv español */
+        : "curriculum-vitae/Cindy_Ramirez_UXUI_FrontEnd_2026-EN.pdf"; /*cv ingles */
+  }
 
 // Aplicar idioma al cargar
 aplicarIdioma();
